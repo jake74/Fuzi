@@ -23,6 +23,7 @@ import Foundation
 import libxml2
 
 /// XML document which can be searched and queried.
+@available(macOSApplicationExtension 10.10, *)
 open class XMLDocument {
   // MARK: - Document Attributes
   /// The XML version.
@@ -174,6 +175,7 @@ open class XMLDocument {
   }
 }
 
+@available(macOSApplicationExtension 10.10, *)
 extension XMLDocument: Equatable {}
 
 /**
@@ -184,11 +186,13 @@ Determine whether two documents are the same
 
 - returns: whether lhs and rhs are equal
 */
+@available(macOSApplicationExtension 10.10, *)
 public func ==(lhs: XMLDocument, rhs: XMLDocument) -> Bool {
   return lhs.cDocument == rhs.cDocument
 }
 
 /// HTML document which can be searched and queried.
+@available(macOSApplicationExtension 10.10, *)
 open class HTMLDocument: XMLDocument {
   // MARK: - Convenience Accessors
   
